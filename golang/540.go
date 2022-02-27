@@ -1,19 +1,21 @@
 func singleNonDuplicate(nums []int) int {
 	left, right := 0, len(nums)-1
 	for left < right {
-		mid := left + (right-left)/2
-		// æ°æ®æ¯æå¯¹çï¼æä»¬æ¯æ¬¡midåå¶æ°ä½ç½®
-		if mid%2 == 1 {
+		mid := left + (right-left) / 2
+		// 数据是成对的，我们每次mid取偶数位置
+		if mid % 2 == 1 {
 			mid = mid - 1
 		}
-		// æ»¡è¶³ç¹æ®æ°å­åºç°åè§å¾ï¼åå³å¯»æ¾
+		// 满足特殊数字出现前规律，向右寻找
 		if nums[mid] == nums[mid+1] {
-			// å 2æ¯ç±äºæ°å­æå¯¹åºç°
+			// 加2是由于数字成对出现
 			left = mid + 2
 		} else {
-			// å¦æè§å¾æ¹åï¼å°±åå·¦å¯»æ¾
+			// 如果规律改变，就向左寻找
 			right = mid
 		}
 	}
 	return nums[left]
 }
+
+
