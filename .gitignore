@@ -1,3 +1,14 @@
 .DS_Store
 
 ../.idea
+/2.两数之和(链表)/2.两数之和(链表).iml
+/3.无重复字符的最长子串/3.无重复字符的最长子串.iml
+/11.盛最多水的容器/11.盛最多水的容器.iml
+/540.有序数组中的单一元素/540.有序数组中的单一元素.iml
+/.idea/codeStyles/codeStyleConfig.xml
+/.idea/codeStyles/Project.xml
+/.idea/.gitignore
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/Swim-LeetCode.iml
+/.idea/vcs.xml
