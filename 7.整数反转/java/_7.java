@@ -55,7 +55,14 @@ public class _7 {
             _2nd handler = new _2nd();
         }
 
+        /**
+         * 使用了long类型，不符合题意
+         *
+         * @param x
+         * @return
+         */
         public int reverse(int x) {
+            //控制正反数
             int sign = 1;
             if (x < 0) {
                 sign = -1;
@@ -65,22 +72,11 @@ public class _7 {
             while (x > 0) {
                 res = res * 10 + x % 10;
                 x /= 10;
+                //如果发生溢出，提前结束
                 if (res >= Integer.MAX_VALUE) return 0;
             }
             return (int) res * sign;
         }
     }
 
-
-    static class _3rd {
-        public static void main(String[] args) {
-            _3rd handler = new _3rd();
-        }
-    }
-
-    static class _4th {
-        public static void main(String[] args) {
-            _4th handler = new _4th();
-        }
-    }
 }
